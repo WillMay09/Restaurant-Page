@@ -1,8 +1,27 @@
-import "./style.css"
-import {greeting} from './greeting.js';
-//import odinImage from "./odin.png";
-console.log(greeting);
-// const image = document.createElement("img");
-// image.src = odinImage;
 
-// document.body.appendChild(image);
+const navMenuButtons = document.querySelectorAll(".nav-menu-button");
+
+navMenuButtons.forEach((button)=>{
+
+    button.addEventListener("click", () =>{
+
+        const page = button.textContent.toLocaleLowerCase();
+        switch(page){
+            case "home":
+              // displayHomePage();
+                break;
+            case "menu":
+                //displayMenuPage();
+                break;
+            case "about":
+               // displayAboutPage();
+                break;
+            default:
+                //displayHomePage();
+                break;
+        };
+
+    });
+
+
+})
