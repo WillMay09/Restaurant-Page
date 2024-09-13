@@ -1,4 +1,6 @@
 
+import "./style.css";
+import { displayHomePage } from "./home/home.js";
 const navMenuButtons = document.querySelectorAll(".nav-menu-button");
 
 navMenuButtons.forEach((button)=>{
@@ -8,7 +10,7 @@ navMenuButtons.forEach((button)=>{
         const page = button.textContent.toLocaleLowerCase();
         switch(page){
             case "home":
-              // displayHomePage();
+              displayHomePage();
                 break;
             case "menu":
                 //displayMenuPage();
@@ -17,7 +19,7 @@ navMenuButtons.forEach((button)=>{
                // displayAboutPage();
                 break;
             default:
-                //displayHomePage();
+                displayHomePage();
                 break;
         };
 
