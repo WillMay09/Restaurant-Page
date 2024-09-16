@@ -2,6 +2,7 @@
 import "./style.css";
 import { displayHomePage } from "./home/home.js";
 import { displayMenu } from "./menu/menu-page.js";
+import { displayAboutPage } from "./about/about.js";
 const navMenuButtons = document.querySelectorAll(".nav-menu-button");
 
     displayHomePage();
@@ -21,7 +22,7 @@ navMenuButtons.forEach((button)=>{
                 displayMenu();
                 break;
             case "about":
-               // displayAboutPage();
+                displayAboutPage();
                 break;
             default:
                 displayHomePage();

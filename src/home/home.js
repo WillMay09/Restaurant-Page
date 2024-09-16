@@ -36,6 +36,7 @@ return container;
 const displayHomePage = () =>{
 
     const contentContainer = document.querySelector('.content');
+    contentContainer.innerHTML = "";
     const container = generateContainer();
 
     const img = createElement({
