@@ -1,9 +1,14 @@
 
 import "./style.css";
 import { displayHomePage } from "./home/home.js";
+import { displayMenu } from "./menu/menu-page.js";
 const navMenuButtons = document.querySelectorAll(".nav-menu-button");
 
+    displayHomePage();
+
 navMenuButtons.forEach((button)=>{
+
+    
 
     button.addEventListener("click", () =>{
 
@@ -13,7 +18,7 @@ navMenuButtons.forEach((button)=>{
               displayHomePage();
                 break;
             case "menu":
-                //displayMenuPage();
+                displayMenu();
                 break;
             case "about":
                // displayAboutPage();

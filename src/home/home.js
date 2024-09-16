@@ -1,6 +1,7 @@
 
 import {createElement} from "../helperFunction.js"
 import instagramLogo from "../images/pexels-rajesh-tp-749235-2098085.jpg"
+import "./style.css"
 const generateContainer = () =>{
 
 
