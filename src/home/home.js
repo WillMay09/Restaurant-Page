@@ -1,6 +1,7 @@
 
 import {createElement} from "../helperFunction.js"
-import instagramLogo from "../images/pexels-rajesh-tp-749235-2098085.jpg"
+import sushi from "../images/pexels-rajesh-tp-749235-2098085.jpg"
+import "./style.css"
 const generateContainer = () =>{
 
 
@@ -34,17 +35,21 @@ return container;
 
 const displayHomePage = () =>{
 
-    const contentContainer = document.querySelector('.content');
+    let contentContainer = document.querySelector(".content");
     const container = generateContainer();
+    const imgContainer = createElement({type: 'div', className: 'imgContainer'});
 
     const img = createElement({
         type: 'img',
-        src: instagramLogo
+        src: sushi,
         });
 
-    container.appendChild(img);
+    imgContainer.appendChild(img);
+    container.appendChild(imgContainer);
+
 
     contentContainer.appendChild(container);
+
 };
 
 

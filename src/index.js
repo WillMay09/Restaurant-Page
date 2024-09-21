@@ -2,7 +2,7 @@
 import "./style.css";
 import { displayHomePage } from "./home/home.js";
 const navMenuButtons = document.querySelectorAll(".nav-menu-button");
-
+displayHomePage();
 navMenuButtons.forEach((button)=>{
 
     button.addEventListener("click", () =>{
