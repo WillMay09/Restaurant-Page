@@ -24,8 +24,7 @@ const generateItems = ({name,image}) =>{
 
     });
 
-    const itemDiv = createElement({
-
+    const itemDiv = createElement({    
         type: 'div',
         className: `${name}-div`,
     })
