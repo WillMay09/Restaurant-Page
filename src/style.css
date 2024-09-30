@@ -36,10 +36,11 @@ body{
 
 
 header{
+
     background-image: url("./images/nigiri-sushi.jpg");
     background-size: cover;
     background-position: center;
-    border-radius: 35px;
+    border-radius: 0px 0px 35px 35px;
     /* padding: 53px 131px; */
     padding-top:  3.31rem ;
     padding-left: 8.18rem;
@@ -107,46 +108,71 @@ footer{
 
     margin: 0;
     padding: 0;
-    background: #2F221C;
-    padding-left: 235px;
-    padding-right: 235px;
+    background: var(--base-color);
+    padding-left: 8.18rem;
+    padding-right: 8.18rem;
     border-radius: 35px 35px 0px 0px;
-}
-
-
-
-.footer-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    /* padding: 25px 195px; */
-    padding: 22px 75px;
-    gap: 10px;
-    width: 100%;
-    background: #2F221C;
-    
-
+    color: #FFFFFF;
 }
 
 .footer-info-section{
 
     display: flex;
-    flex: 1;
     flex-direction: column;
-    align-items:baseline;
+    align-items:flex-start;
     justify-content: space-between;
-    padding: 0px 10px;
-    height: auto;
-}
-/* footer-nav */
 
-/* Auto layout */
+    
+    
+}
+
+.footer-info-section .logo{
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    margin: 0.5rem;
+    padding: 0rem;
+    font: var(--h1);
+
+}
+.footer-info-section img{
+
+    width: 3rem;
+    height: 3rem;
+    margin: 0;
+    padding: 0;
+    filter: invert(100%);
+
+}
+
+.footer-info-section h1{
+    margin: 0;
+    color: #FFFFFF;
+}
+
+
+.footer-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* padding: 25px 195px; */
+    padding: 22px 75px;
+    gap: 10px;
+    width: 100%;
+    background: var(--base-color);
+    
+
+}
+
+
+
 
 footer .navigation{
 
 display: flex;
-flex:2;
 flex-direction: row;
 justify-content: flex-end;
 align-items: center;
