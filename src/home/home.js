@@ -1,52 +1,72 @@
 
 import {createElement} from "../helperFunction.js"
-import instagramLogo from "../images/pexels-rajesh-tp-749235-2098085.jpg"
+import californiaRoll from "../images/california-roll.jpg"
 import "./style.css"
-const generateContainer = () =>{
+
+const generateContainer = (title, text) =>{
 
 
-let container = createElement({type: 'div', className: 'homeContainer'});
+    let infoContainer = createElement({type: 'div', className: 'infoContainer'});
 
-let infoContainer = createElement({type: 'div', className: 'infoContainer'});
+    const h1 = createElement({type: 'h1', className: 'home-title', textContent: title});
 
-const h1 = createElement({type: 'h1', className: 'home-title', textContent: "Dawn Sushi"});
+    const p = createElement({type: 'p', 
+        
+        textContent : text
 
-const p = createElement({type: 'p', 
-    
-    textContent: "Welcome to Dawn Sushi where the sunset meets quality sushi meals",
+    });
 
+    // const button = createElement({type: 'button', 
+    //     className: "reservation",
+    //     textContent:"Make a Reservation",
+    // });
 
-});
-const button = createElement({type: 'button', 
-    className: "exploreMenu",
-    textContent:"Explore Our Menu",
-});
+    // const buttonWithOutline = createElement({type: 'button',
 
-infoContainer.appendChild(h1);
-infoContainer.appendChild(p);
-infoContainer.appendChild(button);
+    //     className: "orderButton",
+    //     textContent: "Order Now"
+    // });
 
-container.appendChild(infoContainer);
+    // const img = createElement({
+    //     type: 'img',
+    //     src: instagramLogo
+    //     });
 
+    infoContainer.appendChild(h1);
+    infoContainer.appendChild(p);
+    // infoContainer.appendChild(button);
 
-
-return container;
+    // section.appendChild(img);
+return infoContainer;
 }
 
 const displayHomePage = () =>{
 
     const contentContainer = document.querySelector('.content');
     contentContainer.innerHTML = "";
-    const container = generateContainer();
+    ///first Section////
+    let title = "Fresh Sushi & BYOB";
+
+    let textContent = `Savor the flavor of our Grilled Salmon Kama, a unique delight now featured
+        on our All-You-Can-Eat menu. Available exclusively during Friday dinner and throughout the weekend—until sold out!
+        Keep in mind, that there is a limit of one serving per two guests.`;
+
+    const section = createElement({type: 'section', className: 'sectionComponent'})
+    const infoContainer = generateContainer(title, textContent);
+    const button = createElement({type:'button', className: "reservation", textContent:"Make a Reservation"});
+    const buttonVarient = createElement({type:'button',  className: "orderButton", textContent: "Order Now"});
+    infoContainer.appendChild(button);
+    infoContainer.appendChild(buttonVarient);
 
     const img = createElement({
-        type: 'img',
-        src: instagramLogo
-        });
-
-    container.appendChild(img);
-
-    contentContainer.appendChild(container);
+            type: 'img',
+             src: californiaRoll
+            });
+    const imageContainer = createElement({type: 'container', className: 'imageContainer'});
+    imageContainer.appendChild(img);
+    section.appendChild(infoContainer);
+    section.appendChild(imageContainer);
+    contentContainer.appendChild(section);
 };
 
 
