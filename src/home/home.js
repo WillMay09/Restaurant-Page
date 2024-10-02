@@ -16,22 +16,6 @@ const generateContainer = (title, text) =>{
 
     });
 
-    // const button = createElement({type: 'button', 
-    //     className: "reservation",
-    //     textContent:"Make a Reservation",
-    // });
-
-    // const buttonWithOutline = createElement({type: 'button',
-
-    //     className: "orderButton",
-    //     textContent: "Order Now"
-    // });
-
-    // const img = createElement({
-    //     type: 'img',
-    //     src: instagramLogo
-    //     });
-
     infoContainer.appendChild(h1);
     infoContainer.appendChild(p);
     // infoContainer.appendChild(button);
@@ -40,10 +24,25 @@ const generateContainer = (title, text) =>{
 return infoContainer;
 }
 
+const createImageDiv = (imageSrc) =>{
+
+    const img = createElement({
+        type: 'img',
+         src: imageSrc
+        });
+    const imageContainer = createElement({type: 'container', className: 'imageContainer'});
+    imageContainer.appendChild(img);
+    return imageContainer;
+
+}
+
+
 const displayHomePage = () =>{
 
     const contentContainer = document.querySelector('.content');
     contentContainer.innerHTML = "";
+    const section = createElement({type: 'section', className: 'sectionComponent'})
+    
     ///first Section////
     let title = "Fresh Sushi & BYOB";
 
@@ -51,22 +50,16 @@ const displayHomePage = () =>{
         on our All-You-Can-Eat menu. Available exclusively during Friday dinner and throughout the weekend—until sold out!
         Keep in mind, that there is a limit of one serving per two guests.`;
 
-    const section = createElement({type: 'section', className: 'sectionComponent'})
     const infoContainer = generateContainer(title, textContent);
     const button = createElement({type:'button', className: "reservation", textContent:"Make a Reservation"});
     const buttonVarient = createElement({type:'button',  className: "orderButton", textContent: "Order Now"});
     infoContainer.appendChild(button);
     infoContainer.appendChild(buttonVarient);
-
-    const img = createElement({
-            type: 'img',
-             src: californiaRoll
-            });
-    const imageContainer = createElement({type: 'container', className: 'imageContainer'});
-    imageContainer.appendChild(img);
+    const imageContainer = createImageDiv(californiaRoll);
     section.appendChild(infoContainer);
     section.appendChild(imageContainer);
     contentContainer.appendChild(section);
+
 };
 
 
