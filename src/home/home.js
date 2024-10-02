@@ -16,19 +16,19 @@ const generateComponent = ({title, text, buttons, imageSrc}) =>{
 
     infoContainer.appendChild(h1);
     infoContainer.appendChild(p);
-
+    const buttonContainer = createElement({type:'div', className: 'buttonContainer'});
     if(buttons && buttons.length > 0){
 
         buttons.forEach(button =>{
             const btn = createElement({type: 'button', className: button.className, textContent:button.textContent});
-            infoContainer.appendChild(btn);
+            buttonContainer.appendChild(btn);
         });
 
 
     }
-
+    infoContainer.appendChild(buttonContainer);
     section.appendChild(infoContainer);
-    
+
     //create image container
     if(imageSrc){
         const imageContainer = createImageDiv(imageSrc);
@@ -79,6 +79,28 @@ const displayHomePage = () =>{
         imageSrc: californiaRoll
 
     });
+    
+    contentContainer.appendChild(firstComponent);
+
+    //second Section///
+
+    // const secondComponent = generateComponent({
+
+    //     title:"Fresh Sushi & BYOB",
+
+    //     text:`Savor the flavor of our Grilled Salmon Kama, a unique delight now featured
+    //     on our All-You-Can-Eat menu. Available exclusively during Friday dinner and throughout the weekend—until sold out!
+    //     Keep in mind, that there is a limit of one serving per two guests.`,
+
+    //     buttons: [
+
+    //         {className: 'reservation', textContent:'Make a Reservation'},
+    //         {className: 'orderButton', textContent: 'Order Now'}
+
+    //     ],
+    //     imageSrc: californiaRoll
+
+    // });
     
     contentContainer.appendChild(firstComponent);
 
