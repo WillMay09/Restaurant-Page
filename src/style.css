@@ -47,6 +47,11 @@ header{
     padding-right: 8.18rem;
 
 }
+header button{
+
+    all:unset;
+    cursor: pointer;
+}
 nav{
     display: flex;
     flex-direction: column;

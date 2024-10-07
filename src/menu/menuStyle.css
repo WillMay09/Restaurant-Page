@@ -1,0 +1,64 @@
+*{
+    --ff: 'Trebuchet MS','Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial', sans-serif;
+    --white: white;
+    --base-color: #355C7D ;
+    --primary-color: #6C5B7B;
+    --secondary-color:#F67280;
+    --mixed-color: linear-gradient(45deg, #355C7D, #6C5B7B, #F67280);
+    --h1: bold 2rem/1.6 var(--ff);
+    --h4: bold 1.4rem/1.6 var(--ff);
+    --p: 1rem/1.6 var(--ff);
+    box-sizing: border-box;
+}
+
+/*shared styles*/
+.menuSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+    padding-left: 8.18rem;
+    padding-right: 8.18rem;
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+    
+}
+
+.menuSection div{
+
+    display: flex;
+    width: 21rem;
+    padding: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    border: 1px solid #e0e0e0; /* Light gray border */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animates hover */
+
+
+
+
+}
+
+.menuSection div:hover {
+    transform: scale(1.05); /* Slightly enlarges on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+}
+
+.menuSection div h3{
+
+    color: black;
+    font:var(--h4);
+
+}
+
+.menuSection div img{
+
+    width: 14rem;
+    height: 14rem;
+    border-radius: 10px;
+}
+
