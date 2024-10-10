@@ -1,10 +1,11 @@
 *{
-    --white: white;
-    --base-color: #355C7D ;
-    --primary-color: #6C5B7B;
-    --secondary-color:#F67280;
+    ---primary-color: white;
+    --secondary-color: #1E1E1E ;
+    --highlight-color:#F67280;
     --mixed-color: linear-gradient(45deg, #355C7D, #6C5B7B, #F67280);
-
+    --text-title: 3rem;
+    --text-category: 1.7rem;
+    --text-p: 1rem;
 
 }
 
@@ -53,50 +54,26 @@ body{
 
 /* Header */
 header{
-    padding-top: 80px;
-    padding-left: 235px;
-    padding-right: 235px;
-
+   
+    background-color: #355C7D;
+    border-radius: 35px;
 
 }
 nav{
-    display: flex;
-    flex-shrink: 0;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 65px;
-    gap: 50px;
-    max-height: 84px;
-    background: #2F221C;
-    border-radius: 35px;
+    
 
 }
 
 .nav-hero{
 
-    display: flex;
-    flex-shrink: 0;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 10px;
-    gap: 50px;
-    height: auto;
+    
 }
 
 
 
 
 .title{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 10px;
-    margin: 0 auto;
-    width: 525.54px;
-    height: 40px; 
+   
 }
 
 
@@ -151,7 +128,6 @@ list-style-type: none;
 .nav-menu-link{
     width: 125px;
     height: 40px;
-    
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
@@ -184,9 +160,7 @@ footer{
     align-items: flex-start;
     /* padding: 25px 195px; */
     gap: 10px;
-
     position: relative;
-    max-height: auto;
     width: 100%;
     background: #2F221C;
     border-radius: 35px 35px 0px 0px;
@@ -196,7 +170,7 @@ footer{
 .footer-info-section{
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items:baseline;
     justify-content: space-between;
     padding: 0px 10px;
@@ -220,15 +194,10 @@ display: flex;
 flex-direction: row;
 justify-content: flex-end;
 align-items: center;
-padding: 0px;
 gap: 50px;
 
-width: 595px;
-height: 40px;
-
-
-
-
+/* width: 595px;
+height: 40px; */
 
 
 }
@@ -255,14 +224,6 @@ line-height: 38px;
 color: #FFFFFF;
         
 }
-
-
-
-
-
-
-
-
 
 
 
