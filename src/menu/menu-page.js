@@ -1,5 +1,6 @@
 import menuItems from "./menu-items";
 import {createElement} from "../helperFunction";
+import "./menuStyle.css"
 
 
 
@@ -11,7 +12,7 @@ const generateItems = ({name,image}) =>{
         {
             type: 'h3',
             className: `${name}-title`,
-            textcontent: name,
+            textContent: name,
 
 
         }
@@ -29,8 +30,9 @@ const generateItems = ({name,image}) =>{
         className: `${name}-div`,
     })
 
-    itemDiv.appendChild(itemTitle);
+    
     itemDiv.appendChild(photo);
+    itemDiv.appendChild(itemTitle);
 
     return itemDiv;
 
@@ -47,11 +49,11 @@ export const displayMenu = () =>{
 
     const contentContainer = document.querySelector('.content')
     contentContainer.innerHTML = "";
-    let menuDiv = document.createElement('div');
+    let menuDiv = document.createElement('section');
 
     Object.assign(menuDiv,{
 
-        className: "menuDiv",
+        className: "menuSection",
 
     });
 

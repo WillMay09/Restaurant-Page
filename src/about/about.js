@@ -1,7 +1,8 @@
 import "./style.css"
 import { createElement } from "../helperFunction"
 import dawnSushiLogo from "../images/icons/sushi-svgrepo-com.svg"
-
+import { generateComponent } from "../createComponent"
+import sushiPlatter from "../images/sushi-platter.jpg"
 const createAboutInformation = () =>{
 
     const infoDiv = createElement({
@@ -52,12 +53,29 @@ const createAboutInformation = () =>{
 export const displayAboutPage = () =>{
 
     const contentContainer = document.querySelector('.content');
-
     contentContainer.innerHTML = "";
 
-    const infoDiv = createAboutInformation();
+    const firstComponent = generateComponent({
 
-    contentContainer.appendChild(infoDiv);
+        sectionNumber: 'section1',
+
+        title: {text: "A Taste of the Finest Sushi Dishes", className: 'aboutTitle'},
+
+        text:`Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+        sed do eiusmod tempor incididunt ut labore et dolore magna 
+        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+        in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
+
+       
+        imageSrc: sushiPlatter
+
+    })
+
+
+    contentContainer.appendChild(firstComponent);
+
 
     
 }

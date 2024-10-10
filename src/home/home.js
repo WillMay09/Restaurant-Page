@@ -1,53 +1,88 @@
 
-import {createElement} from "../helperFunction.js"
-import instagramLogo from "../images/pexels-rajesh-tp-749235-2098085.jpg"
+import { generateComponent} from "../createComponent.js"
+import californiaRoll from "../images/california-roll.jpg"
+import sushiMeal from "../images/sushiDish.jpg"
+
 import "./style.css"
-const generateContainer = () =>{
-
-
-let container = createElement({type: 'div', className: 'homeContainer'});
-
-let infoContainer = createElement({type: 'div', className: 'infoContainer'});
-
-const h1 = createElement({type: 'h1', className: 'home-title', textContent: "Dawn Sushi"});
-
-const p = createElement({type: 'p', 
-    
-    textContent: "Welcome to Dawn Sushi where the sunset meets quality sushi meals",
-
-
-});
-const button = createElement({type: 'button', 
-    className: "exploreMenu",
-    textContent:"Explore Our Menu",
-});
-
-infoContainer.appendChild(h1);
-infoContainer.appendChild(p);
-infoContainer.appendChild(button);
-
-container.appendChild(infoContainer);
 
 
 
-return container;
-}
+
 
 const displayHomePage = () =>{
 
     const contentContainer = document.querySelector('.content');
     contentContainer.innerHTML = "";
-    const container = generateContainer();
+   
+    ///first Section////
+    const firstComponent = generateComponent({
 
-    const img = createElement({
-        type: 'img',
-        src: instagramLogo
-        });
+        sectionNumber: 'section1',
 
-    container.appendChild(img);
+        title: {text: "Fresh Sushi & BYOB", className: 'firstTitle'},
 
-    contentContainer.appendChild(container);
+        text:`Savor the flavor of our Grilled Salmon Kama, a unique delight now featured
+        on our All-You-Can-Eat menu. Available exclusively during Friday dinner and throughout the weekend—until sold out!
+        Keep in mind, that there is a limit of one serving per two guests.`,
+
+        buttons: [
+
+            {className: 'reservation', textContent:'Make a Reservation'},
+            {className: 'orderButton', textContent: 'Order Now'}
+
+        ],
+        imageSrc: californiaRoll
+
+    });
+    
+    contentContainer.appendChild(firstComponent);
+
+    //second Section
+
+    const secondComponent = generateComponent({
+
+        sectionNumber: 'section2',
+
+        title: {text: "Fresh Sushi & BYOB", className: 'SecondTitle'},
+
+        text:`Savor the flavor of our Grilled Salmon Kama, a unique delight now featured
+        on our All-You-Can-Eat menu. Available exclusively during Friday dinner and throughout the weekend—until sold out!
+        Keep in mind, that there is a limit of one serving per two guests.`,
+
+        buttons: [
+
+            {className: 'detailsButton', textContent:'More Details'},
+            
+
+        ],
+        imageSrc: sushiMeal
+
+    });
+    
+     contentContainer.appendChild(secondComponent);
+
+
+     const thirdComponent = generateComponent({
+
+        sectionNumber: 'section3',
+
+        title: {text: "Fresh Sushi & BYOB", className: 'SecondTitle'},
+
+        text:`Savor the flavor of our Grilled Salmon Kama, a unique delight now featured
+        on our All-You-Can-Eat menu. Available exclusively during Friday dinner and throughout the weekend—until sold out!
+        Keep in mind, that there is a limit of one serving per two guests.`,
+
+
+    });
+    
+     contentContainer.appendChild(thirdComponent);
+
+
+
 };
+
+
+
 
 
 export { displayHomePage };
